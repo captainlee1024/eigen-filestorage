@@ -6,3 +6,36 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+anyhow = "1.0.70"
+tokio-stream = "0.1.8"
+
+aws-config= { version = "1.1.9", features = ["behavior-version-latest"] }
+aws-sdk-s3= { version = "1.21.0", features = ["rt-tokio"] }
+aws-smithy-runtime= { version = "1.1.8"}
+aws-smithy-runtime-api= { version = "1.2.0", features = ["client"] }
+aws-smithy-types= { version = "1.1.8", features = ["http-body-0-4-x"] }
+
+
+[dependencies.clap]
+version = "~4.4"
+features = ["derive"]
+
+[dependencies.futures-util]
+version = "0.3.21"
+features = ["alloc"]
+
+[dependencies.tokio]
+version = "1.20.1"
+features = ["full"]
+
+[dependencies.tracing-subscriber]
+version = "0.3.5"
+features = ["env-filter"]
+
+[dependencies.uuid]
+version = "1.3.1"
+features = ["serde", "v4"]
+
+[dependencies.serde]
+version = "1"
+features = ["derive"]
